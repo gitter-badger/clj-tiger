@@ -31,11 +31,7 @@
                [ir-type ir-exp] (trans-exp v-env t-env sym-env' body)
                v-env'    (assoc v-env the-var ir-type)] ;; Use the inferred type
            [v-env' t-env sym-env' [:move t ir-exp]])
-
-         [:fundec the-fun fields body]
-         (let [t         (gensym "f")
-               sym-env'  (assoc sym-env the-fun t)
-               []])
+         
          )) 
 
 
